@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import debounce from "lodash.debounce";
 import React, { useContext, useState } from "react";
 import searchIcon from "../assets/search-icon.svg";
@@ -24,7 +23,7 @@ const SearchInput = ({ handleSearch }) => {
   return (
     <>
       <form
-        className="w-96 relative flex items-center ml-7 font-nunito"
+        className="lg:w-70 w-full relative flex items-center lg:ml-7 font-nunito lg:mb-0 mb-4"
         onSubmit={handleSubmit}
         autoComplete="false"
       >
@@ -41,7 +40,7 @@ const SearchInput = ({ handleSearch }) => {
         </button>
       </form>
       {searchText.length > 0 ? (
-        <ul className="absolute top-11 right-0 w-96 h-96 rounded overflow-x-hidden py-2 bg-gray-200 opacity-80 backdrop-blur-md">
+        <ul className="absolute top-11 left-0 w-96 h-96 rounded overflow-x-hidden py-2 bg-gray-200 opacity-80 backdrop-blur-sm scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-gray-200">
           {searchData ? (
             searchData.map((coin) => {
               return (
